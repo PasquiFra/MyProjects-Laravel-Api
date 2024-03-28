@@ -1,0 +1,40 @@
+#presents {
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    a {
+        text-decoration: none;
+        text-transform: none;
+        color: black;
+    }
+
+    button {
+        display: inline;
+        width: 200px;
+        height: 50px;
+        padding: 5px 20px;
+        vertical-align: middle;
+        line-height: 100%;
+    }
+
+    .card {
+        margin: 25px 0;
+        width: 100%;
+
+        button {
+            align-self: center;
+        }
+    }
+
+    .project {
+        padding: 25px 10px;
+        border-bottom: 1px solid goldenrod;
+
+        .link {
+            color: goldenrod;
+            text-decoration: underline;
+        }
+    }
+}

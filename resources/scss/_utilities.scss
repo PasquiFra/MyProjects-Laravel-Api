@@ -1,0 +1,31 @@
+.flex {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+}
+
+.just-center {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.just-between {
+    justify-content: space-between;
+    text-align: center;
+}
+
+.text-to-center {
+    line-height: 100%;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    text-transform: none;
+}
+
+li {
+    list-style-type: none;
+}

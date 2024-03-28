@@ -1,0 +1,53 @@
+.title {
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+
+#projects-index {
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    a {
+        text-decoration: none;
+        text-transform: none;
+        color: black;
+    }
+
+    .project {
+        padding: 25px 10px;
+        border-bottom: 1px solid goldenrod;
+
+        .link {
+            color: goldenrod;
+            text-decoration: underline;
+        }
+    }
+
+    .edits {
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+
+        gap: 10px;
+
+        a {
+            padding: 5px;
+            width: 40px;
+            height: 40px;
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
