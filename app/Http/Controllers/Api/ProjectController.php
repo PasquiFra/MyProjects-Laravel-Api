@@ -13,7 +13,12 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = Project::all();
+        $projects = Project::whereIsPublished(true)->latest()->get();
+
+        foreach ($projects as $project) {
+            if ($project->image) $project->image = url('storage/' . $project->image);
+        }
+
         return response()->json([
             compact('projects')
         ]);

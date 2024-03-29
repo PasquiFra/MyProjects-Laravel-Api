@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -17,7 +18,7 @@ class Project extends Model
     public function getShortDescription($project)
     {
         $words = explode(' ', $project->description);
-        $arr_words = array_slice($words, 0, 15);
+        $arr_words = array_slice($words, 0, 30);
         $short_description = implode(' ', $arr_words);
 
         return $short_description;
@@ -32,4 +33,10 @@ class Project extends Model
     {
         return $this->belongsToMany(Technology::class);
     }
+
+    //accessor per impostare url completo immagine
+    // public function image(): Attribute
+    // {
+    //     return Attribute::make(fn ($value) => $value && app('request')->is('api/*') ? url('storage/' . $value) : $value);
+    // }
 }
