@@ -34,9 +34,13 @@ class ProjectController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $slug)
     {
-        //
+        $project = Project::whereIsPublished(true)->whereSlug('slug');
+
+        if (!$project) return response(null, 404);
+
+        return response()->json($project);
     }
 
     /**

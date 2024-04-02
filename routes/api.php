@@ -30,3 +30,4 @@ use Illuminate\Support\Facades\Route;
 //Route::resource('/projects', ProjectController::class);
 //!OPPURE
 Route::apiResource('/projects', ProjectController::class);
+Route::get('/projects/{slug}', [ProjectController::class, 'show']);
