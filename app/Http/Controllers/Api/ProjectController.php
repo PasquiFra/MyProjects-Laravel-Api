@@ -13,7 +13,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = Project::whereIsPublished(true)->latest()->get();
+        $projects = Project::whereIsPublished(true)->latest()->with('type', 'technologies')->paginate(3);
 
         foreach ($projects as $project) {
             if ($project->image) $project->image = url('storage/' . $project->image);
