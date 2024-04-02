@@ -19,9 +19,7 @@ class ProjectController extends Controller
             if ($project->image) $project->image = url('storage/' . $project->image);
         }
 
-        return response()->json([
-            compact('projects')
-        ]);
+        return response()->json($projects);
     }
 
 
