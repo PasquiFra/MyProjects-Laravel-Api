@@ -3,7 +3,7 @@
     function getSlugTitle(){
         const titleForm = document.getElementById('title').value;
         
-        const splitTitle = titleForm.split(' ');
+        const splitTitle = titleForm.toLowerCase().split(' ');
         
         const slugTitle = splitTitle.join('-');
         
@@ -14,7 +14,7 @@
         
         document.getElementById('slug').value = getSlugTitle();
     });
-    
+
     document.getElementById('title').addEventListener('submit', function() {
         
         document.getElementById('slug').value = getSlugTitle();
