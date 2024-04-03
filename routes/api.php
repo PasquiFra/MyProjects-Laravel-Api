@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\ProjectController;
+use App\Http\Controllers\Api\ProjectTypeController;
 use App\Models\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -31,3 +32,6 @@ use Illuminate\Support\Facades\Route;
 //!OPPURE
 Route::apiResource('/projects', ProjectController::class);
 Route::get('/projects/{slug}', [ProjectController::class, 'show']);
+
+// rotta per il project/type controller
+Route::get('/tags/{slug}/projects', ProjectTypeController::class);
