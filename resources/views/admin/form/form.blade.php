@@ -37,8 +37,7 @@
     <div class="input-group mb-3 w-50 p-1 d-flex">
         <label class="form-label label" for="slug">Slug</label>
         <input type="text" id="slug" name="slug" class="form-control" 
-        value="{{$project->slug}}" 
-        disabled>    
+        value="{{$project->slug}}" readonly>    
     </div>
 
     <div class="input-group mb-3 w-100 p-1">

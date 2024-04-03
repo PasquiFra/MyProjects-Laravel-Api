@@ -26,7 +26,7 @@ class UpdateProjectRequest extends FormRequest
 
         return [
             'title' => ['required', 'string', Rule::unique('projects')->ignore($id)],
-            'slug' => 'string',
+            'slug' => 'string|required',
             'description' => 'string|required',
             'project_url' => 'url:http,https|required',
             'image' => 'nullable|image|mimes:png,jpg,jpeg',

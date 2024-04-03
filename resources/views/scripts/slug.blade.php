@@ -14,5 +14,10 @@
         
         document.getElementById('slug').value = getSlugTitle();
     });
+    
+    document.getElementById('title').addEventListener('submit', function() {
+        
+        document.getElementById('slug').value = getSlugTitle();
+    });
 
 </script>

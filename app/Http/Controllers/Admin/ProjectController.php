@@ -102,7 +102,6 @@ class ProjectController extends Controller
     {
         $data = $request->validated();
 
-
         if (Arr::exists($data, 'image')) {
 
             if ($project->image) Storage::delete($project->image);
@@ -118,6 +117,8 @@ class ProjectController extends Controller
         } elseif (!Arr::exists($data, 'technologies') && $project->has('technologies')) {
             $project->technologies()->detach();
         }
+
+        $project->slug = $data['slug'];
 
         $project->update($data);
 
