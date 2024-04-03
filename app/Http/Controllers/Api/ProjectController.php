@@ -36,7 +36,7 @@ class ProjectController extends Controller
      */
     public function show(string $slug)
     {
-        $project = Project::whereIsPublished(true)->whereSlug($slug)->get();
+        $project = Project::whereIsPublished(true)->with('type', 'technologies')->whereSlug($slug)->get();
 
         if (!$project) return response(null, 404);
 
