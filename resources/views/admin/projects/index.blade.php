@@ -45,8 +45,8 @@
             @empty
             @endforelse
           </td>
-          <td>{{$project->created_at}}</td>
-          <td>{{$project->updated_at}}</td>
+          <td>{{$project->getFormattedDate('created_at', 'd-m-Y H:i:s')}}</td>
+          <td>{{$project->getFormattedDate('updated_at', 'd-m-Y H:i:s')}}</td>
           <td class="edits">
               <a href="{{route('admin.projects.show', $project->id)}}" class="btn btn-sm btn-primary"><i class="fa-solid fa-eye"></i></a>
               <a href="{{route('admin.projects.edit', $project->id)}}" class="btn btn-warning"><i class="fa-solid fa-pen"></i></a>

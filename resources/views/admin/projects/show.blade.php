@@ -59,10 +59,10 @@
                 <strong><span class="{{$project->is_published ? 'text-success' : 'text-warning'}}">{{$project->is_published ? 'Pubblicato' : 'Bozza'}}</span></strong>
             </li>
             <li>
-                Creato il: <strong>{{$project->created_at}}</strong>
+                Creato il: <strong>{{$project->getFormattedDate('created_at', 'd-m-Y H:i:s')}}</strong>
             </li>
             <li>
-                Ultima modifica: <strong>{{$project->updated_at}}</strong>
+                Ultima modifica: <strong>{{$project->getFormattedDate('updated_at', 'd-m-Y H:i:s')}}</strong>
             </li>
         </ul>
     </div>  
