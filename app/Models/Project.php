@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Attribute;
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Casts\Attribute as CastsAttribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Support\Str;
+
 
 class Project extends Model
 {
@@ -39,6 +40,12 @@ class Project extends Model
     {
         return Carbon::create($this->$column)->format($format);
     }
+
+    // public function created_at(): string
+    // {
+    //     return $this->created_at->format('d-m-Y');
+    //     return Carbon::create($this->created_at)->format('d-m-Y');
+    // }
 
     //accessor per impostare url completo immagine
     // public function image(): Attribute
